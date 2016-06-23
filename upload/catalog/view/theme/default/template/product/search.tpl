@@ -106,7 +106,7 @@
         </div>
       </div>
       <br />
-      <div class="row">
+      <div class="row padding-sm">
         <?php foreach ($products as $product) { ?>
         <div class="product-layout product-list col-xs-12">
           <div class="product-thumb">

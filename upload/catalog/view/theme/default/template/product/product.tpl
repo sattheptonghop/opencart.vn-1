@@ -333,7 +333,7 @@
       </div>
       <?php if ($products) { ?>
       <h3><?php echo $text_related; ?></h3>
-      <div class="row">
+      <div class="row padding-sm">
         <?php $i = 0; ?>
         <?php foreach ($products as $product) { ?>
         <?php if ($column_left && $column_right) { ?>

@@ -551,7 +551,7 @@ footer h5 {
 	font-weight: bold;
 }
 .product-thumb .caption {
-	padding: 0 20px;
+	padding: 0 8px;
 	min-height: 50px;
 }
 .product-list .product-thumb .caption {
@@ -752,3 +752,7 @@ h2.price {
 	background-image: linear-gradient(to bottom, #23a1d1, #1f90bb);
 	background-repeat: repeat-x;
 	border-color: #1f90bb #1f90bb #145e7a; margin-top:0; }
+
+.padding-sm > [class*='col-']{
+	padding: 0 8px;
+}
