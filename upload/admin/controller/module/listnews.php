@@ -27,7 +27,6 @@ class ControllerModuleListnews extends Controller {
  	 * List News mangager
  	 */
 	public function index() {
-		$this->install();
 		$this->load->language('module/listnews');
 		$this->load->model('module/listnews');
 		

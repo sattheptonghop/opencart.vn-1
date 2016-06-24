@@ -32,7 +32,6 @@ class ControllerModuleNews extends Controller {
  	 * News mangager
  	 */
 	public function index() {
-		$this->install();
 		$this->load->language('module/news');
 		$this->load->model('module/news');
  
