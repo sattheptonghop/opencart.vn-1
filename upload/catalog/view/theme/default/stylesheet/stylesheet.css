@@ -756,3 +756,7 @@ h2.price {
 .padding-sm > [class*='col-']{
 	padding: 0 8px;
 }
+
+.fb-page, .g_page{
+	margin: 20px 0;
+}

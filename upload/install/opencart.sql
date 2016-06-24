@@ -1478,7 +1478,8 @@ INSERT INTO `oc_extension` (`extension_id`, `type`, `code`) VALUES
 (26, 'shipping', 'free'),
 (27, 'module', 'bestseller'),
 (28, 'module', 'support'),
-(29, 'payment', 'bank_transfer');
+(29, 'payment', 'bank_transfer'),
+(30, 'module', 'socials');
 
 -- --------------------------------------------------------
 
@@ -1766,7 +1767,9 @@ INSERT INTO `oc_layout_module` (`layout_module_id`, `layout_id`, `code`, `positi
 (198, 15, 'banner.39', 'column_left', 4),
 (201, 14, 'listnews.33', 'column_left', 2),
 (202, 14, 'statistic.36', 'column_left', 3),
-(203, 14, 'banner.39', 'column_left', 4);
+(203, 14, 'banner.39', 'column_left', 4),
+(213, 1, 'socials.41', 'column_left', 5),
+(214, 1, 'socials.42', 'column_left', 6);
 
 -- --------------------------------------------------------
 
@@ -1990,7 +1993,10 @@ INSERT INTO `oc_module` (`module_id`, `name`, `code`, `setting`) VALUES
 (37, 'Sản phẩm mới nhất', 'latest', '{"name":"S\\u1ea3n ph\\u1ea9m m\\u1edbi nh\\u1ea5t","limit":"8","width":"200","height":"250","status":"1"}'),
 (38, 'Home page', 'bestseller', '{"name":"Home page","limit":"8","width":"200","height":"200","status":"1"}'),
 (39, 'Góc quảng cáo', 'banner', '{"name":"G\\u00f3c qu\\u1ea3ng c\\u00e1o","banner_id":"9","width":"262","height":"379","status":"1"}'),
-(40, 'Hỗ trợ trực tuyến', 'support', '{"name":"H\\u1ed7 tr\\u1ee3 tr\\u1ef1c tuy\\u1ebfn","skype":"demoskype1","skype_2":"demoskype2","yahoo":"demoyahoo","email":"demo@opencart.vn","facebook":"opencartvietnam","status":"1"}');
+(40, 'Hỗ trợ trực tuyến', 'support', '{"name":"H\\u1ed7 tr\\u1ee3 tr\\u1ef1c tuy\\u1ebfn","skype":"demoskype1","skype_2":"demoskype2","yahoo":"demoyahoo","email":"demo@opencart.vn","facebook":"opencartvietnam","status":"1"}'),
+(41, 'Facebook Page', 'socials', '{"name":"Facebook Page","status":"1","page_url":"https:\/\/www.facebook.com\/FacebookVietnam","appId":"","width":"217","height":"214"}'),
+(42, 'Google Plus', 'socials', '{"name":"Google Plus","status":"1","page_url":"https:\/\/plus.google.com\/+GoogleWebmasters","width":"217"}')
+;
 
 -- --------------------------------------------------------
 
