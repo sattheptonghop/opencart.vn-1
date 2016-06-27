@@ -397,7 +397,9 @@ INSERT INTO `oc_banner` (`banner_id`, `name`, `status`) VALUES
 (6, 'Sản phẩm HP', 1),
 (7, 'Slideshow trang chủ', 1),
 (8, 'Nhà sản xuất', 0),
-(9, 'Quảng cáo trái', 1);
+(9, 'Quảng cáo trái', 1),
+(10, 'Header', 1)
+;
 
 -- --------------------------------------------------------
 
@@ -424,7 +426,9 @@ INSERT INTO `oc_banner_image` (`banner_image_id`, `banner_id`, `link`, `image`, 
 (142, 9, 'http://opencart.vn', 'catalog/quangcao.png', 0),
 (147, 7, 'http://www.opencart.vn', 'catalog/banner2.jpg', 0),
 (145, 7, 'http://www.opencart.vn', 'catalog/banner1.jpg', 0),
-(146, 7, 'http://www.opencart.vn', 'catalog/banner4.jpg', 0);
+(146, 7, 'http://www.opencart.vn', 'catalog/banner4.jpg', 0),
+(148, 10, '', 'catalog/header.png', 0)
+;
 
 -- --------------------------------------------------------
 
@@ -450,7 +454,9 @@ INSERT INTO `oc_banner_image_description` (`banner_image_id`, `language_id`, `ba
 (147, 2, 7, 'slideshow3'),
 (146, 2, 7, 'slideshow2'),
 (145, 2, 7, 'slideshow1'),
-(142, 2, 9, 'Ads');
+(142, 2, 9, 'Ads'),
+(148, 2, 10, 'Header Banner')
+;
 
 -- --------------------------------------------------------
 
@@ -1718,7 +1724,7 @@ CREATE TABLE `oc_layout_module` (
   `layout_module_id` int(11) NOT NULL AUTO_INCREMENT,
   `layout_id` int(11) NOT NULL,
   `code` varchar(64) NOT NULL,
-  `position` varchar(14) NOT NULL,
+  `position` varchar(20) NOT NULL,
   `sort_order` int(3) NOT NULL,
   PRIMARY KEY (`layout_module_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
@@ -1763,7 +1769,9 @@ INSERT INTO `oc_layout_module` (`layout_module_id`, `layout_id`, `code`, `positi
 (202, 14, 'statistic.36', 'column_left', 3),
 (203, 14, 'banner.39', 'column_left', 4),
 (213, 1, 'socials.41', 'column_left', 5),
-(214, 1, 'socials.42', 'column_left', 6);
+(214, 1, 'socials.42', 'column_left', 6),
+(235, 1, 'banner.43', 'header_background', 0)
+;
 
 -- --------------------------------------------------------
 
@@ -1989,8 +1997,8 @@ INSERT INTO `oc_module` (`module_id`, `name`, `code`, `setting`) VALUES
 (39, 'Góc quảng cáo', 'banner', '{"name":"G\\u00f3c qu\\u1ea3ng c\\u00e1o","banner_id":"9","width":"262","height":"379","status":"1"}'),
 (40, 'Hỗ trợ trực tuyến', 'support', '{"name":"H\\u1ed7 tr\\u1ee3 tr\\u1ef1c tuy\\u1ebfn","skype":"demoskype1","skype_2":"demoskype2","yahoo":"demoyahoo","email":"demo@opencart.vn","facebook":"opencartvietnam","status":"1"}'),
 (41, 'Facebook Page', 'socials', '{"name":"Facebook Page","status":"1","page_url":"https:\/\/www.facebook.com\/FacebookVietnam","appId":"","width":"217","height":"214"}'),
-(42, 'Google Plus', 'socials', '{"name":"Google Plus","status":"1","page_url":"https:\/\/plus.google.com\/+GoogleWebmasters","width":"217"}')
-;
+(42, 'Google Plus', 'socials', '{"name":"Google Plus","status":"1","page_url":"https:\/\/plus.google.com\/+GoogleWebmasters","width":"217"}'),
+(43, 'Header', 'banner', '{"name":"Header","banner_id":"10","width":"960","height":"100","status":"1"}');
 
 -- --------------------------------------------------------
 

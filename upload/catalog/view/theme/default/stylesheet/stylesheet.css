@@ -133,7 +133,8 @@ div.required .control-label:before {
 header{
 	padding: 20px 0;
 	height: 100px;
-	background: url('../image/header.png') no-repeat center center;
+	background-repeat: no-repeat;
+	background-position: center center;
 }
 
 /* logo */

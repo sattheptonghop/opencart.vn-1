@@ -104,6 +104,11 @@
                     <?php } ?>
                   </select></td>
                 <td class="text-left"><select name="layout_module[<?php echo $module_row; ?>][position]" class="form-control">
+                    <?php if ($layout_module['position'] == 'header_background') { ?>
+                    <option value="header_background" selected="selected"><?php echo $text_header_background; ?></option>
+                    <?php } else { ?>
+                    <option value="header_background"><?php echo $text_header_background; ?></option>
+                    <?php } ?>
                     <?php if ($layout_module['position'] == 'content_top') { ?>
                     <option value="content_top" selected="selected"><?php echo $text_content_top; ?></option>
                     <?php } else { ?>
@@ -180,6 +185,7 @@ function addModule() {
 	<?php } ?>
     html += '  </select></td>'; 
 	html += '  <td class="text-left"><select name="layout_module[' + module_row + '][position]" class="form-control">';
+    html += '    <option value="header_background"><?php echo $text_header_background; ?></option>';
     html += '    <option value="content_top"><?php echo $text_content_top; ?></option>';
     html += '    <option value="content_bottom"><?php echo $text_content_bottom; ?></option>';
     html += '    <option value="column_left"><?php echo $text_column_left; ?></option>';

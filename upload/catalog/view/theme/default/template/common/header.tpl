@@ -73,7 +73,7 @@
     </div>
   </div>
 </nav>
-<header>
+<header <?php echo (! empty($background) ? 'style="background-image: url(\''.$background.'\')"' : '' ) ?>>
   <div class="container">
     <div class="row">
       <div class="col-sm-4">

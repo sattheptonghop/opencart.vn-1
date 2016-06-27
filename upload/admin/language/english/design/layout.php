@@ -10,6 +10,7 @@ $_['text_edit']           = 'Edit Layout';
 $_['text_default']        = 'Default';
 $_['text_content_top']    = 'Content Top';
 $_['text_content_bottom'] = 'Content Bottom';
+$_['text_header_background'] = 'Header Background';
 $_['text_column_left']    = 'Column Left';
 $_['text_column_right']   = 'Column Right';
 
