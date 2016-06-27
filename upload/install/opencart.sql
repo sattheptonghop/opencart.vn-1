@@ -1769,7 +1769,6 @@ INSERT INTO `oc_layout_module` (`layout_module_id`, `layout_id`, `code`, `positi
 (202, 14, 'statistic.36', 'column_left', 3),
 (203, 14, 'banner.39', 'column_left', 4),
 (213, 1, 'socials.41', 'column_left', 5),
-(214, 1, 'socials.42', 'column_left', 6),
 (235, 1, 'banner.43', 'header_background', 0)
 ;
 
