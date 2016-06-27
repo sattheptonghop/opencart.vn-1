@@ -24,7 +24,7 @@ h3 {
 	font-size: 21px;
 }
 h4 {
-	font-size: 15px;
+	font-size: 14px;
 }
 h5 {
 	font-size: 12px;
@@ -74,8 +74,6 @@ div.required .control-label:before {
 	text-decoration: none;
 	color: #ffffff;
 	background-color: #229ac8;
-	background-image: linear-gradient(to bottom, #23a1d1, #1f90bb);
-	background-repeat: repeat-x;
 }
 /* top */
 #top {
@@ -215,8 +213,6 @@ header{
 /* menu */
 #menu {
 	background-color: #229ac8;
-	background-image: linear-gradient(to bottom, #23a1d1, #1f90bb);
-	background-repeat: repeat-x;
 	border-color: #1f90bb #1f90bb #145e7a;
 	min-height: 40px;
 }
@@ -771,10 +767,14 @@ h2.price {
 }
 
 
-.list-group-item.active{background-color: #229ac8;
-	background-image: linear-gradient(to bottom, #23a1d1, #1f90bb);
-	background-repeat: repeat-x;
-	border-color: #1f90bb #1f90bb #145e7a; margin-top:0; }
+.list-group-item{
+	padding: 8px 8px;
+}
+.list-group-item.active{
+	background-color: #229ac8;
+	border-color: #1f90bb #1f90bb #145e7a; 
+	margin-top:0; 
+}
 
 .padding-sm > [class*='col-']{
 	padding: 0 8px;
