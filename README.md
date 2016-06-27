@@ -1,6 +1,8 @@
 # OpenCart Viet Nam
 
 [27-06-2016] 
+- Thêm header banner vào bố cục
+- Thay đổi menu admin
 - Tạo cấu hình SMTP mặc định
 - Giỏ hàng dạng rút gọn
 - Module mạng xã hội
