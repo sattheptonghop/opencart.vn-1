@@ -1,4 +1,5 @@
 <footer>
+  <div class="botmenu">
   <div class="container">
     <div class="row">
       <?php if ($informations) { ?>
@@ -38,7 +39,9 @@
         </ul>
       </div>
     </div>
-    <hr>
+  </div>
+  </div>
+  <div class="container">
     <p><?php echo $powered; ?></p>
   </div>
 </footer>
