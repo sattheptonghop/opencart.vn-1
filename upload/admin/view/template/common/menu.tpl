@@ -37,6 +37,13 @@
       <li><a href="<?php echo $information; ?>"><?php echo $text_information; ?></a></li>
     </ul>
   </li>
+  <li id="content"><a class="parent"><i class="fa fa-cloud fa-fw"></i> <span><?php echo $text_content; ?></span></a>
+    <ul>
+      <li><a href="<?php echo $listnews; ?>"><?php echo $text_news_list; ?></a></li>
+      <li><a href="<?php echo $news; ?>"><?php echo $text_news; ?></a></li>
+      <li><a href="<?php echo $banner; ?>"><?php echo $text_banner; ?></a></li>
+    </ul>
+  </li>
   <li id="extension"><a class="parent"><i class="fa fa-puzzle-piece fa-fw"></i> <span><?php echo $text_extension; ?></span></a>
     <ul>
       <li><a href="<?php echo $installer; ?>"><?php echo $text_installer; ?></a></li>
@@ -100,7 +107,6 @@
   <li id="design"><a class="parent"><i class="fa fa-television fa-fw"></i> <span><?php echo $text_design; ?></span></a>
     <ul>
       <li><a href="<?php echo $layout; ?>"><?php echo $text_layout; ?></a></li>
-      <li><a href="<?php echo $banner; ?>"><?php echo $text_banner; ?></a></li>
     </ul>
   </li>
   <li id="customer"><a class="parent"><i class="fa fa-user fa-fw"></i> <span><?php echo $text_customer; ?></span></a>

@@ -36,6 +36,9 @@ class ControllerCommonMenu extends Controller {
 		$data['text_dashboard'] = $this->language->get('text_dashboard');
 		$data['text_help'] = $this->language->get('text_help');
 		$data['text_information'] = $this->language->get('text_information');
+		$data['text_content'] = $this->language->get('text_content');
+		$data['text_news_list'] = $this->language->get('text_news_list');
+		$data['text_news'] = $this->language->get('text_news');
 		$data['text_installer'] = $this->language->get('text_installer');
 		$data['text_language'] = $this->language->get('text_language');
 		$data['text_layout'] = $this->language->get('text_layout');
@@ -132,6 +135,8 @@ class ControllerCommonMenu extends Controller {
 		$data['fraud'] = $this->url->link('extension/fraud', 'token=' . $this->session->data['token'], 'SSL');
 		$data['geo_zone'] = $this->url->link('localisation/geo_zone', 'token=' . $this->session->data['token'], 'SSL');
 		$data['information'] = $this->url->link('catalog/information', 'token=' . $this->session->data['token'], 'SSL');
+		$data['listnews'] = $this->url->link('module/listnews', 'token=' . $this->session->data['token'], 'SSL');
+		$data['news'] = $this->url->link('module/news', 'token=' . $this->session->data['token'], 'SSL');
 		$data['installer'] = $this->url->link('extension/installer', 'token=' . $this->session->data['token'], 'SSL');
 		$data['language'] = $this->url->link('localisation/language', 'token=' . $this->session->data['token'], 'SSL');
 		$data['layout'] = $this->url->link('design/layout', 'token=' . $this->session->data['token'], 'SSL');
