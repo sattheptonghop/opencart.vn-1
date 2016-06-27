@@ -4,6 +4,10 @@ $_['heading_title']                  = 'Checkout';
 
 // Text
 $_['text_cart']                      = 'Shopping Cart';
+$_['text_step_1']           		 = 'Step 1: Checkout Information';
+$_['text_step_2']           		 = 'Step 2: Confirm Order';
+$_['text_shipping_method_title']     = 'Shipping method';
+$_['text_payment_method_title']      = 'Payment method';
 $_['text_checkout_option']           = 'Step 1: Checkout Options';
 $_['text_checkout_account']          = 'Step 2: Account &amp; Billing Details';
 $_['text_checkout_payment_address']  = 'Step 2: Billing Details';
@@ -92,3 +96,5 @@ $_['error_no_shipping']              = 'Warning: No Shipping options are availab
 $_['error_payment']                  = 'Warning: Payment method required!';
 $_['error_no_payment']               = 'Warning: No Payment options are available. Please <a href="%s">contact us</a> for assistance!';
 $_['error_custom_field']             = '%s required!';
+
+$_['button_order']            		 = 'Place order';
