@@ -1,5 +1,5 @@
 <div class="row padding-sm">
-<div id="slideshow<?php echo $module; ?>" class="owl-carousel col-xs-12 col-lg-12 col-md-12 col-sm-12" style="opacity: 1;">
+<div id="slideshow<?php echo $module; ?>" class="slideshow col-xs-12 col-lg-12 col-md-12 col-sm-12" style="opacity: 1;">
   <?php foreach ($banners as $banner) { ?>
   <div class="item">
     <?php if ($banner['link']) { ?>

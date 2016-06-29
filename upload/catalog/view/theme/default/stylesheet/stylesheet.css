@@ -334,6 +334,7 @@ header{
 /* content */
 #content {
 	min-height: 600px;
+	padding-right: 24px;
 }
 /* footer */
 footer {
@@ -522,12 +523,12 @@ footer h5 {
 	background-image: linear-gradient(to bottom, #333333, #111111);
 }
 /* list group */
-.list-group a {
+.list-group > a {
 	border: 1px solid #DDDDDD;
 	color: #888888;
 	padding: 8px 12px;
 }
-.list-group a.active, .list-group a.active:hover, .list-group a:hover {
+.list-group > a.active, .list-group > a.active:hover, .list-group a:hover {
 	color: #444444;
 	background: #eeeeee;
 	border: 1px solid #DDDDDD;
@@ -790,4 +791,8 @@ h2.price {
 
 .fb-page, .g_page{
 	margin: 20px 0;
+}
+
+.slideshow .owl-wrapper-outer{
+	border: none;
 }
