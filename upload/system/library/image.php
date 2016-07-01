@@ -122,6 +122,32 @@ class Image {
 		$this->height = $height;
 	}
 
+	public function fixsize($width = 0, $height = 0) {
+		if (!$this->width || !$this->height) {
+			return;
+		}
+
+		$image_old = $this->image;
+		$this->image = imagecreatetruecolor($width, $height);
+
+		if ($this->mime == 'image/png') {
+			imagealphablending($this->image, false);
+			imagesavealpha($this->image, true);
+			$background = imagecolorallocatealpha($this->image, 255, 255, 255, 127);
+			imagecolortransparent($this->image, $background);
+		} else {
+			$background = imagecolorallocate($this->image, 255, 255, 255);
+		}
+
+		imagefilledrectangle($this->image, 0, 0, $width, $height, $background);
+
+		imagecopyresampled($this->image, $image_old, 0, 0, 0, 0, $width, $height, $this->width, $this->height);
+		imagedestroy($image_old);
+
+		$this->width = $width;
+		$this->height = $height;
+	}
+
 	public function watermark($watermark, $position = 'bottomright') {
 		switch($position) {
 			case 'topleft':

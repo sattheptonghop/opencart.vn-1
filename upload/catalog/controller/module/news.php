@@ -28,7 +28,7 @@ class ControllerModuleNews extends Controller {
 		$news = $this->model_module_news->getAllNews(array('start'=>0,'limit'=>$setting_news->limit));
 		foreach ($news as $n) {
 			if ($n['image']) {
-				$thumb = $this->model_tool_image->resize($n['image'], $this->config->get('config_image_additional_width'), $this->config->get('config_image_additional_height'));
+				$thumb = $this->model_tool_image->fixsize($n['image'], $this->config->get('config_image_additional_width'), $this->config->get('config_image_additional_height'));
 			} else {
 				$thumb = '';
 			}
