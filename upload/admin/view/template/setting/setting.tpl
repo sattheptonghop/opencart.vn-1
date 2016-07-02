@@ -42,6 +42,8 @@
           </ul>
           <div class="tab-content">
             <div class="tab-pane active" id="tab-general">
+            	<fieldset>
+            	<legend><?php echo $tab_general; ?></legend>
                 <div class="form-group required">
                   <label class="col-sm-2 control-label" for="input-meta-title"><?php echo $entry_meta_title; ?></label>
                   <div class="col-sm-10">
@@ -90,7 +92,35 @@
                       <?php } ?>
                       <?php } ?>
                   </select></div>
-              </div>
+              	</div>
+              	</fieldset>
+              	<fieldset>
+	                <legend><?php echo $text_default_color; ?></legend>
+	                <div class="form-group">
+	                  <label class="col-sm-2 control-label" for="input-config-default-color-link"><?php echo $text_default_color_link; ?></label>
+	                  <div class="col-sm-10">
+	                    <input type="color" name="config_default_color_link" value="<?php echo $config_default_color_link; ?>" />
+	                  </div>
+	                </div>
+	              	<div class="form-group">
+	                  <label class="col-sm-2 control-label" for="input-config-default-color-menu"><?php echo $text_default_color_menu; ?></label>
+	                  <div class="col-sm-10">
+	                    <input type="color" name="config_default_color_menu" value="<?php echo $config_default_color_menu; ?>" />
+	                  </div>
+	                </div>
+	                <div class="form-group">
+	                  <label class="col-sm-2 control-label" for="input-config-default-color-box"><?php echo $text_default_color_box; ?></label>
+	                  <div class="col-sm-10">
+	                    <input type="color" name="config_default_color_box" value="<?php echo $config_default_color_box; ?>" />
+	                  </div>
+	                </div>
+	                <div class="form-group">
+	                  <label class="col-sm-2 control-label" for="input-config-default-color-footer"><?php echo $text_default_color_footer; ?></label>
+	                  <div class="col-sm-10">
+	                    <input type="color" name="config_default_color_footer" value="<?php echo $config_default_color_footer; ?>" />
+	                  </div>
+	                </div>
+                </fieldset>
             </div>
             <div class="tab-pane" id="tab-store">
                 <div class="form-group required">

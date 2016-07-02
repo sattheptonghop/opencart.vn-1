@@ -37,20 +37,24 @@
 <?php echo $analytic; ?>
 <?php } ?>
 <style type="text/css">
+  a{
+    color: <?php echo $config_default_color_link ?>;
+  }
+
   /* Menu */
   .menu-bg-color, .dropdown-menu li > a:hover, #menu .see-all:hover, #menu .see-all:focus{
-    background: #229ac8;
+    background: <?php echo $config_default_color_menu ?>;
   }
 
   /* Box title */
   .list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover{
-    background-color: #229ac8;
-    border-color: #229ac8;
+    background-color: <?php echo $config_default_color_box ?>;
+    border-color: <?php echo $config_default_color_box ?>;
   }
 
-  /* Button */
+  /* Footer */
   footer .botmenu{
-    background-color: #219ac7;
+    background-color: <?php echo $config_default_color_footer ?>;
   }
 </style>
 </head>

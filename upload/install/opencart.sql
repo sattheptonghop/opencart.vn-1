@@ -3255,6 +3255,11 @@ INSERT INTO `oc_setting` (`setting_id`, `store_id`, `code`, `key`, `value`, `ser
 (286, 0, 'config', 'config_mail_smtp_timeout', '5', 0),
 (287, 0, 'config', 'config_captcha', 'basic_captcha', 0),
 (288, 0, 'config', 'config_captcha_page', '["review","return","contact"]', 1),
+(289, 0, 'config', 'config_login_attempts', '5', 0)
+(290, 0, 'config', 'config_default_color_menu', '#229ac8', 0),
+(291, 0, 'config', 'config_default_color_box', '#229ac8', 0),
+(292, 0, 'config', 'config_default_color_footer', '#229ac8', 0),
+(293, 0, 'config', 'config_default_color_link', '#229ac8', 0),
 (1548, 0, 'free', 'free_total', '0', 0),
 (1549, 0, 'free', 'free_geo_zone_id', '3', 0),
 (1550, 0, 'free', 'free_status', '1', 0),
@@ -3264,8 +3269,7 @@ INSERT INTO `oc_setting` (`setting_id`, `store_id`, `code`, `key`, `value`, `ser
 (2585, 0, 'bank_transfer', 'bank_transfer_order_status_id', '1', 0),
 (2586, 0, 'bank_transfer', 'bank_transfer_geo_zone_id', '0', 0),
 (2587, 0, 'bank_transfer', 'bank_transfer_status', '1', 0),
-(2588, 0, 'bank_transfer', 'bank_transfer_sort_order', '', 0),
-(289, 0, 'config', 'config_login_attempts', '5', 0);
+(2588, 0, 'bank_transfer', 'bank_transfer_sort_order', '', 0);
 
 -- --------------------------------------------------------
 

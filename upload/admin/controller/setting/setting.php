@@ -51,6 +51,11 @@ class ControllerSettingSetting extends Controller {
 		$data['text_security'] = $this->language->get('text_security');
 		$data['text_upload'] = $this->language->get('text_upload');
 		$data['text_error'] = $this->language->get('text_error');
+		$data['text_default_color'] = $this->language->get('text_default_color');
+		$data['text_default_color_menu'] = $this->language->get('text_default_color_menu');
+		$data['text_default_color_box'] = $this->language->get('text_default_color_box');
+		$data['text_default_color_footer'] = $this->language->get('text_default_color_footer');
+		$data['text_default_color_link'] = $this->language->get('text_default_color_link');
 
 		$data['entry_name'] = $this->language->get('entry_name');
 		$data['entry_owner'] = $this->language->get('entry_owner');
@@ -471,6 +476,30 @@ class ControllerSettingSetting extends Controller {
 		$data['cancel'] = $this->url->link('setting/store', 'token=' . $this->session->data['token'], 'SSL');
 
 		$data['token'] = $this->session->data['token'];
+
+		if (isset($this->request->post['config_default_color_menu'])) {
+			$data['config_default_color_menu'] = $this->request->post['config_default_color_menu'];
+		} else {
+			$data['config_default_color_menu'] = $this->config->get('config_default_color_menu');
+		}
+
+		if (isset($this->request->post['config_default_color_box'])) {
+			$data['config_default_color_box'] = $this->request->post['config_default_color_box'];
+		} else {
+			$data['config_default_color_box'] = $this->config->get('config_default_color_box');
+		}
+
+		if (isset($this->request->post['config_default_color_footer'])) {
+			$data['config_default_color_footer'] = $this->request->post['config_default_color_footer'];
+		} else {
+			$data['config_default_color_footer'] = $this->config->get('config_default_color_footer');
+		}
+
+		if (isset($this->request->post['config_default_color_link'])) {
+			$data['config_default_color_link'] = $this->request->post['config_default_color_link'];
+		} else {
+			$data['config_default_color_link'] = $this->config->get('config_default_color_link');
+		}
 
 		if (isset($this->request->post['config_name'])) {
 			$data['config_name'] = $this->request->post['config_name'];

@@ -29,6 +29,12 @@ $_['text_security']                    = 'Security';
 $_['text_upload']                      = 'Uploads';
 $_['text_error']                       = 'Error Handling';
 
+$_['text_default_color']               = 'Colors of default theme';
+$_['text_default_color_menu']          = 'Menu color';
+$_['text_default_color_box']           = 'Box color';
+$_['text_default_color_footer']        = 'Footer color';
+$_['text_default_color_link']          = 'A tag color';
+
 // Entry
 $_['entry_name']                       = 'Store Name';
 $_['entry_owner']                      = 'Store Owner';

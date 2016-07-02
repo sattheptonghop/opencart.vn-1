@@ -36,6 +36,11 @@ class ControllerCommonHeader extends Controller {
 		$data['direction'] = $this->language->get('direction');
 
 		$data['name'] = $this->config->get('config_name');
+		
+		$data['config_default_color_menu'] = $this->config->get('config_default_color_menu');
+		$data['config_default_color_box'] = $this->config->get('config_default_color_box');
+		$data['config_default_color_footer'] = $this->config->get('config_default_color_footer');
+		$data['config_default_color_link'] = $this->config->get('config_default_color_link');
 
 		if (is_file(DIR_IMAGE . $this->config->get('config_logo'))) {
 			$data['logo'] = $server . 'image/' . $this->config->get('config_logo');
