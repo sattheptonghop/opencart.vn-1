@@ -393,13 +393,11 @@ CREATE TABLE `oc_banner` (
 -- Dumping data for table `oc_banner`
 --
 
-INSERT INTO `oc_banner` (`banner_id`, `name`, `status`) VALUES
-(6, 'Sản phẩm HP', 1),
+INSERT INTO `oc_banner` (`banner_id`, `name`, `status`) VALUES 
 (7, 'Slideshow trang chủ', 1),
 (8, 'Nhà sản xuất', 0),
 (9, 'Quảng cáo trái', 1),
-(10, 'Header', 1)
-;
+(10, 'Header', 1);
 
 -- --------------------------------------------------------
 
@@ -421,8 +419,7 @@ CREATE TABLE `oc_banner_image` (
 -- Dumping data for table `oc_banner_image`
 --
 
-INSERT INTO `oc_banner_image` (`banner_image_id`, `banner_id`, `link`, `image`, `sort_order`) VALUES
-(87, 6, 'index.php?route=product/manufacturer/info&amp;manufacturer_id=7', 'catalog/demo/compaq_presario.jpg', 0),
+INSERT INTO `oc_banner_image` (`banner_image_id`, `banner_id`, `link`, `image`, `sort_order`) VALUES 
 (142, 9, 'http://opencart.vn', 'catalog/quangcao.png', 0),
 (147, 7, 'http://www.opencart.vn', 'catalog/banner2.jpg', 0),
 (145, 7, 'http://www.opencart.vn', 'catalog/banner1.jpg', 0),
@@ -449,8 +446,7 @@ CREATE TABLE `oc_banner_image_description` (
 -- Dumping data for table `oc_banner_image_description`
 --
 
-INSERT INTO `oc_banner_image_description` (`banner_image_id`, `language_id`, `banner_id`, `title`) VALUES
-(87, 2, 6, 'HP Banner'),
+INSERT INTO `oc_banner_image_description` (`banner_image_id`, `language_id`, `banner_id`, `title`) VALUES 
 (147, 2, 7, 'slideshow3'),
 (146, 2, 7, 'slideshow2'),
 (145, 2, 7, 'slideshow1'),
@@ -1770,8 +1766,8 @@ INSERT INTO `oc_layout_module` (`layout_module_id`, `layout_id`, `code`, `positi
 (203, 14, 'banner.39', 'column_left', 4),
 (213, 1, 'socials.41', 'column_left', 5),
 (235, 1, 'banner.43', 'header_background', 0),
-(236, 1, 'bestseller.38', 'column_left', 3)
-;
+(236, 1, 'bestseller.38', 'column_left', 3),
+(249, 1, 'block_product.44', 'content_top', 1);
 
 -- --------------------------------------------------------
 
@@ -1983,22 +1979,21 @@ CREATE TABLE `oc_module` (
 -- Dumping data for table `oc_module`
 --
 
-INSERT INTO `oc_module` (`module_id`, `name`, `code`, `setting`) VALUES
-(30, 'Danh mục', 'banner', '{"name":"Category","banner_id":"6","width":"182","height":"182","status":"1"}'),
+INSERT INTO `oc_module` (`module_id`, `name`, `code`, `setting`) VALUES 
 (29, 'Trang chủ', 'carousel', '{"name":"Home Page","banner_id":"8","width":"130","height":"100","status":"1"}'),
-(28, 'Home Page', 'featured', '{"name":"Home Page","product":["58","60","57","52","51","59","56","55"],"limit":"12","width":"200","height":"250","status":"1"}'),
-(27, 'Home Page', 'slideshow', '{"name":"Home Page","banner_id":"7","width":"848","height":"283","status":"1"}'),
-(31, 'Banner 1', 'banner', '{"name":"Banner 1","banner_id":"6","width":"182","height":"182","status":"1"}'),
+(28, 'Home Page', 'featured', '{"name":"Home Page","product":["58","60","57","52","51","59","56","55"],"limit":"4","width":"200","height":"250","status":"1"}'),
+(27, 'Home Page', 'slideshow', '{"name":"Home Page","banner_id":"7","width":"848","height":"283","status":"1"}'), 
 (32, 'Tin tức mới nhất', 'news', '{"name":"Tin t\\u1ee9c m\\u1edbi nh\\u1ea5t","width":"300","limit":"10","status":"1"}'),
 (33, 'Danh mục tin tức', 'listnews', '{"name":"Danh m\\u1ee5c tin t\\u1ee9c","width":"300","limit":"20","status":"1"}'),
 (36, 'Thống kê', 'statistic', '{"name":"Th\\u1ed1ng k\\u00ea","online_view":"1","today_view":"1","yesterday_view":"0","lastmonth_view":"1","total_view":"1","total":"10002","status":"1"}'),
-(37, 'Sản phẩm mới nhất', 'latest', '{"name":"S\\u1ea3n ph\\u1ea9m m\\u1edbi nh\\u1ea5t","limit":"8","width":"200","height":"250","status":"1"}'),
+(37, 'Sản phẩm mới nhất', 'latest', '{"name":"S\\u1ea3n ph\\u1ea9m m\\u1edbi nh\\u1ea5t","limit":"4","width":"200","height":"250","status":"1"}'),
 (38, 'Home page', 'bestseller', '{"name":"Home page","limit":"8","width":"200","height":"200","status":"1"}'),
 (39, 'Góc quảng cáo', 'banner', '{"name":"G\\u00f3c qu\\u1ea3ng c\\u00e1o","banner_id":"9","width":"262","height":"379","status":"1"}'),
 (40, 'Hỗ trợ trực tuyến', 'support', '{"name":"H\\u1ed7 tr\\u1ee3 tr\\u1ef1c tuy\\u1ebfn","skype":"demoskype1","skype_2":"demoskype2","yahoo":"demoyahoo","email":"demo@opencart.vn","facebook":"opencartvietnam","status":"1"}'),
 (41, 'Facebook Page', 'socials', '{"name":"Facebook Page","status":"1","page_url":"https:\/\/www.facebook.com\/FacebookVietnam","appId":"","width":"217","height":"214"}'),
 (42, 'Google Plus', 'socials', '{"name":"Google Plus","status":"1","page_url":"https:\/\/plus.google.com\/+GoogleWebmasters","width":"217"}'),
-(43, 'Header', 'banner', '{"name":"Header","banner_id":"10","width":"960","height":"100","status":"1"}');
+(43, 'Header', 'banner', '{"name":"Header","banner_id":"10","width":"960","height":"100","status":"1"}'),
+(44, 'Váy nữ thời trang', 'block_product', '{"name":"V\u00e1y n\u1eef th\u1eddi trang","category_id":"45","status":"1","category_limit":"8"}');
 
 -- --------------------------------------------------------
 

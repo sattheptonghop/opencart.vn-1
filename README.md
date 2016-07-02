@@ -1,5 +1,11 @@
 # OpenCart Viet Nam
 
+[2-07-2016] 
+- Module Block sản phẩm
+- Cắt ảnh
+- Helper giới hạn ký tự
+- Style danh sách tin tức
+
 [27-06-2016] 
 - Thêm header banner vào bố cục
 - Thay đổi menu admin
