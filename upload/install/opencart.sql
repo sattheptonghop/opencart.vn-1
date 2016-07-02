@@ -1986,14 +1986,14 @@ INSERT INTO `oc_module` (`module_id`, `name`, `code`, `setting`) VALUES
 (32, 'Tin tức mới nhất', 'news', '{"name":"Tin t\\u1ee9c m\\u1edbi nh\\u1ea5t","width":"300","limit":"10","status":"1"}'),
 (33, 'Danh mục tin tức', 'listnews', '{"name":"Danh m\\u1ee5c tin t\\u1ee9c","width":"300","limit":"20","status":"1"}'),
 (36, 'Thống kê', 'statistic', '{"name":"Th\\u1ed1ng k\\u00ea","online_view":"1","today_view":"1","yesterday_view":"0","lastmonth_view":"1","total_view":"1","total":"10002","status":"1"}'),
-(37, 'Sản phẩm mới nhất', 'latest', '{"name":"S\\u1ea3n ph\\u1ea9m m\\u1edbi nh\\u1ea5t","limit":"4","width":"200","height":"250","status":"1"}'),
+(37, 'Sản phẩm mới nhất', 'latest', '{"name":"S\\u1ea3n ph\\u1ea9m m\\u1edbi nh\\u1ea5t","limit":"4","width":"216","height":"250","status":"1"}'),
 (38, 'Home page', 'bestseller', '{"name":"Home page","limit":"8","width":"200","height":"200","status":"1"}'),
 (39, 'Góc quảng cáo', 'banner', '{"name":"G\\u00f3c qu\\u1ea3ng c\\u00e1o","banner_id":"9","width":"262","height":"379","status":"1"}'),
 (40, 'Hỗ trợ trực tuyến', 'support', '{"name":"H\\u1ed7 tr\\u1ee3 tr\\u1ef1c tuy\\u1ebfn","skype":"demoskype1","skype_2":"demoskype2","yahoo":"demoyahoo","email":"demo@opencart.vn","facebook":"opencartvietnam","status":"1"}'),
 (41, 'Facebook Page', 'socials', '{"name":"Facebook Page","status":"1","page_url":"https:\/\/www.facebook.com\/FacebookVietnam","appId":"","width":"217","height":"214"}'),
 (42, 'Google Plus', 'socials', '{"name":"Google Plus","status":"1","page_url":"https:\/\/plus.google.com\/+GoogleWebmasters","width":"217"}'),
 (43, 'Header', 'banner', '{"name":"Header","banner_id":"10","width":"960","height":"100","status":"1"}'),
-(44, 'Váy nữ thời trang', 'block_product', '{"name":"V\u00e1y n\u1eef th\u1eddi trang","category_id":"45","status":"1","category_limit":"8"}');
+(44, 'Váy nữ thời trang', 'block_product', '{"name":"V\\u00e1y n\\u1eef th\\u1eddi trang","category_id":"45","status":"1","category_limit":"8"}');
 
 -- --------------------------------------------------------
 
@@ -2203,6 +2203,9 @@ CREATE TABLE `oc_order` (
 -- Dumping data for table `oc_order`
 --
 
+INSERT INTO `oc_order` (`order_id`, `invoice_no`, `invoice_prefix`, `store_id`, `store_name`, `store_url`, `customer_id`, `customer_group_id`, `firstname`, `lastname`, `email`, `telephone`, `fax`, `custom_field`, `payment_firstname`, `payment_lastname`, `payment_company`, `payment_address_1`, `payment_address_2`, `payment_city`, `payment_postcode`, `payment_country`, `payment_country_id`, `payment_zone`, `payment_zone_id`, `payment_address_format`, `payment_custom_field`, `payment_method`, `payment_code`, `shipping_firstname`, `shipping_lastname`, `shipping_company`, `shipping_address_1`, `shipping_address_2`, `shipping_city`, `shipping_postcode`, `shipping_country`, `shipping_country_id`, `shipping_zone`, `shipping_zone_id`, `shipping_address_format`, `shipping_custom_field`, `shipping_method`, `shipping_code`, `comment`, `total`, `order_status_id`, `affiliate_id`, `commission`, `marketing_id`, `tracking`, `language_id`, `currency_id`, `currency_code`, `currency_value`, `ip`, `forwarded_ip`, `user_agent`, `accept_language`, `date_added`, `date_modified`) VALUES
+(1, 0, 'INV-2013-00', 0, 'Your Store', '', 0, 1, 'Trung', 'Hoàng', 'shank.0.hair@gmail.com', '0983 000 0000', '', '[]', 'Trung', 'Hoàng', '', '8 Hồ Sen', '', 'Lê Chân', '', 'Việt Nam', 230, 'Hải Phòng', 3774, '', '[]', 'Thu tiền khi giao hàng', 'cod', 'Trung', 'Hoàng', '', '8 Hồ Sen', '', 'Lê Chân', '', 'Việt Nam', 230, 'Hải Phòng', 3774, '', '[]', 'Phí vận chuyển cố định', 'flat.flat', '', 185000.0000, 1, 0, 0.0000, 0, '', 2, 1, 'VND', 1.00000000, '::1', '', 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36', 'vi-VN,vi;q=0.8,fr-FR;q=0.6,fr;q=0.4,en-US;q=0.2,en;q=0.2,de;q=0.2,ja;q=0.2', '2016-07-02 09:39:45', '2016-07-02 09:39:55');
+
 -- --------------------------------------------------------
 
 --
@@ -2243,6 +2246,8 @@ CREATE TABLE `oc_order_history` (
 -- Dumping data for table `oc_order_history`
 --
 
+INSERT INTO `oc_order_history` (`order_history_id`, `order_id`, `order_status_id`, `notify`, `comment`, `date_added`) VALUES
+(1, 1, 1, 0, '', '2016-07-02 09:39:55');
 
 -- --------------------------------------------------------
 
@@ -2284,7 +2289,8 @@ CREATE TABLE `oc_order_product` (
   PRIMARY KEY (`order_product_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
-
+INSERT INTO `oc_order_product` (`order_product_id`, `order_id`, `product_id`, `name`, `model`, `quantity`, `price`, `total`, `tax`, `reward`) VALUES
+(1, 1, 59, 'Đầm Pastel Cổ Lọ Thắt Nơ', 'Thời Trang Nữ', 1, 185000.0000, 185000.0000, 0.0000, 0);
 
 -- --------------------------------------------------------
 
@@ -2387,6 +2393,11 @@ CREATE TABLE `oc_order_total` (
 --
 -- Dumping data for table `oc_order_total`
 --
+
+INSERT INTO `oc_order_total` (`order_total_id`, `order_id`, `code`, `title`, `value`, `sort_order`) VALUES
+(3, 1, 'sub_total', 'Thành tiền', 185000.0000, 1),
+(4, 1, 'shipping', 'Phí vận chuyển cố định', 30000.0000, 3),
+(5, 1, 'total', 'Tổng cộng ', 215000.0000, 9);
 
 -- --------------------------------------------------------
 
