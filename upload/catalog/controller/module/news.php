@@ -22,19 +22,22 @@ class ControllerModuleNews extends Controller {
 
 		$this->load->model('tool/image');
 		$this->load->model('extension/module');
+		$this->load->model('tool/helper');
+
  		$lastest_news = $this->model_extension_module->getModulesByCode('news');
  		$setting_news = json_decode($lastest_news[0]['setting']);
  		$data['module_title'] = $lastest_news[0]['name'];
 		$news = $this->model_module_news->getAllNews(array('start'=>0,'limit'=>$setting_news->limit));
 		foreach ($news as $n) {
 			if ($n['image']) {
-				$thumb = $this->model_tool_image->fixsize($n['image'], $this->config->get('config_image_additional_width'), $this->config->get('config_image_additional_height'));
+				$thumb = $this->model_tool_image->resizeAdaptive($n['image'], $this->config->get('config_image_additional_width'), $this->config->get('config_image_additional_height'), 'w');
 			} else {
 				$thumb = '';
 			}
 			$data['news'][] = array(
 				'news_id' 		=> $n['id'],
-				'name'       	=> $n['title'],
+				'name'       	=> $this->model_tool_helper->limitWord($n['title'], 6),
+				'posted_date'   => $n['posted_date'],
 				'thumb'       	=> $thumb,
 				'href'        	=> $this->url->link('news/news', 'id=' . $n['id'])
 			);
@@ -46,5 +49,7 @@ class ControllerModuleNews extends Controller {
 			return $this->load->view('default/template/module/news.tpl', $data);
 		}
 	}
+
+
 
 }

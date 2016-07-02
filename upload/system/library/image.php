@@ -122,13 +122,29 @@ class Image {
 		$this->height = $height;
 	}
 
-	public function fixsize($width = 0, $height = 0) {
+	public function resizeAdaptive($width = 0, $height = 0, $default = '') {
 		if (!$this->width || !$this->height) {
 			return;
 		}
 
+		$scale = 1;
+
+		$scale_w = $width / $this->width;
+		$scale_h = $height / $this->height;
+
+		if ($default == 'w') {
+			$scale = $scale_w;
+		} elseif ($default == 'h') {
+			$scale = $scale_h;
+		} else {
+			$scale = min($scale_w, $scale_h);
+		}
+
+		$new_width = (int)($this->width * $scale);
+		$new_height = (int)($this->height * $scale);
+
 		$image_old = $this->image;
-		$this->image = imagecreatetruecolor($width, $height);
+		$this->image = imagecreatetruecolor($new_width, $new_height);
 
 		if ($this->mime == 'image/png') {
 			imagealphablending($this->image, false);
@@ -139,13 +155,13 @@ class Image {
 			$background = imagecolorallocate($this->image, 255, 255, 255);
 		}
 
-		imagefilledrectangle($this->image, 0, 0, $width, $height, $background);
+		imagefilledrectangle($this->image, 0, 0, $new_width, $new_height, $background);
 
-		imagecopyresampled($this->image, $image_old, 0, 0, 0, 0, $width, $height, $this->width, $this->height);
+		imagecopyresampled($this->image, $image_old, 0, 0, 0, 0, $new_width, $new_height, $this->width, $this->height);
 		imagedestroy($image_old);
 
-		$this->width = $width;
-		$this->height = $height;
+		$this->width = $new_width;
+		$this->height = $new_height;
 	}
 
 	public function watermark($watermark, $position = 'bottomright') {

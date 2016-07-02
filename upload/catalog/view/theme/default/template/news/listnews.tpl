@@ -13,7 +13,7 @@
     <?php } else { ?>
     <?php $class = 'col-sm-12'; ?>
     <?php } ?>
-    <div id="content" class="<?php echo $class; ?>"><?php echo $content_top; ?>
+    <div id="content" class="<?php echo $class; ?> list-style"><?php echo $content_top; ?>
       <h1><?php echo $heading_title; ?></h1>
       <?php 
         foreach ($news as $n) {
@@ -23,8 +23,8 @@
                 <img src='image/{$n['image']}' alt='{$n['title']}' class='img-thumbnail img-responsive' />
               </div>
               <div class='col-sm-8'>
-                <p><a href='{$n['href']}'><strong>{$n['title']}</strong></a></p>
-                <p><i class='fa fa-calendar'></i> $text_published_at ". date('H:i', strtotime($n['posted_date'])) ."  $text_on 
+                <p class='title'><a href='{$n['href']}'><strong>{$n['title']}</strong></a></p>
+                <p class='info'><i class='fa fa-calendar'></i> $text_published_at ". date('H:i', strtotime($n['posted_date'])) ."  $text_on 
                 " . date('d/m/Y', strtotime($n['posted_date'])) . "
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i class='fa fa-eye'></i>  $text_views   {$n['hits']}
                 </p>
