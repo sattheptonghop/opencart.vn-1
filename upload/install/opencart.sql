@@ -1767,7 +1767,21 @@ INSERT INTO `oc_layout_module` (`layout_module_id`, `layout_id`, `code`, `positi
 (213, 1, 'socials.41', 'column_left', 5),
 (235, 1, 'banner.43', 'header_background', 0),
 (236, 1, 'bestseller.38', 'column_left', 3),
-(249, 1, 'block_product.44', 'content_top', 1);
+(249, 1, 'block_product.44', 'content_top', 1),
+(255, 2, 'banner.43', 'header_background', 0),
+(261, 3, 'banner.43', 'header_background', 0),
+(267, 14, 'banner.43', 'header_background', 0),
+(268, 13, 'banner.43', 'header_background', 0),
+(269, 11, 'banner.43', 'header_background', 0),
+(270, 7, 'banner.43', 'header_background', 0),
+(272, 6, 'banner.43', 'header_background', 0),
+(273, 12, 'banner.43', 'header_background', 0),
+(274, 9, 'banner.43', 'header_background', 0),
+(277, 4, 'banner.43', 'header_background', 0),
+(278, 8, 'banner.43', 'header_background', 0),
+(280, 5, 'banner.43', 'header_background', 0),
+(286, 15, 'banner.43', 'header_background', 0),
+(288, 10, 'banner.43', 'header_background', 0);
 
 -- --------------------------------------------------------
 
