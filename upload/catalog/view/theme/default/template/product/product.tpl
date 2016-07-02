@@ -126,31 +126,31 @@
           <h1><?php echo $heading_title; ?></h1>
           <ul class="list-unstyled">
             <?php if ($manufacturer) { ?>
-            <li><?php echo $text_manufacturer; ?> <a href="<?php echo $manufacturers; ?>"><?php echo $manufacturer; ?></a></li>
+            <li><strong><?php echo $text_manufacturer; ?></strong> <a href="<?php echo $manufacturers; ?>"><?php echo $manufacturer; ?></a></li>
             <?php } ?>
-            <li><?php echo $text_model; ?> <?php echo $model; ?></li>
+            <li><strong><?php echo $text_model; ?></strong> <?php echo $model; ?></li>
             <?php if ($reward) { ?>
-            <li><?php echo $text_reward; ?> <?php echo $reward; ?></li>
+            <li><strong><?php echo $text_reward; ?></strong> <?php echo $reward; ?></li>
             <?php } ?>
-            <li><?php echo $text_stock; ?> <?php echo $stock; ?></li>
+            <li><strong><?php echo $text_stock; ?></strong> <?php echo $stock; ?></li>
           </ul>
           <?php if ($price) { ?>
-          <ul class="list-unstyled">
+          <ul class="list-unstyled price">
             <?php if (!$special) { ?>
             <li>
-              <h2><?php echo $price; ?></h2>
+              <h2 class="price-new"><?php echo $price; ?></h2>
             </li>
             <?php } else { ?>
-            <li><span style="text-decoration: line-through;"><?php echo $price; ?></span></li>
+            <li><span class="price-old"><?php echo $price; ?></span></li>
             <li>
-              <h2><?php echo $special; ?></h2>
+              <h2 class="price-new"><?php echo $special; ?></h2>
             </li>
             <?php } ?>
             <?php if ($tax) { ?>
-            <li><?php echo $text_tax; ?> <?php echo $tax; ?></li>
+            <li class="price-tax"><?php echo $text_tax; ?> <?php echo $tax; ?></li>
             <?php } ?>
             <?php if ($points) { ?>
-            <li><?php echo $text_points; ?> <?php echo $points; ?></li>
+            <li class="price-tax"><?php echo $text_points; ?> <?php echo $points; ?></li>
             <?php } ?>
             <?php if ($discounts) { ?>
             <li>

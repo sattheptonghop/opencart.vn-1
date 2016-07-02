@@ -36,6 +36,23 @@
 <?php foreach ($analytics as $analytic) { ?>
 <?php echo $analytic; ?>
 <?php } ?>
+<style type="text/css">
+  /* Menu */
+  .menu-bg-color, .dropdown-menu li > a:hover, #menu .see-all:hover, #menu .see-all:focus{
+    background: #229ac8;
+  }
+
+  /* Box title */
+  .list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover{
+    background-color: #229ac8;
+    border-color: #229ac8;
+  }
+
+  /* Button */
+  footer .botmenu{
+    background-color: #219ac7;
+  }
+</style>
 </head>
 <body class="<?php echo $class; ?>">
 <nav id="top">
@@ -90,7 +107,7 @@
 </header>
 <?php if ($categories) { ?>
 <div class="container">
-  <nav id="menu" class="navbar">
+  <nav id="menu" class="menu-bg-color navbar">
     <div class="navbar-header"><span id="category" class="visible-xs"><?php echo $text_category; ?></span>
       <button type="button" class="btn btn-navbar navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse"><i class="fa fa-bars"></i></button>
     </div>

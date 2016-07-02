@@ -19,8 +19,8 @@
         foreach ($news as $n) {
           echo "
             <div class='row'>
-              <div class='col-sm-4'>
-                <img src='image/{$n['image']}' alt='{$n['title']}' class='img-thumbnail img-responsive' />
+              <div class='col-sm-4 img-thumbnail'>
+                <div><img src='image/{$n['image']}' alt='{$n['title']}' class='img-responsive' /></div>
               </div>
               <div class='col-sm-8'>
                 <p class='title'><a href='{$n['href']}'><strong>{$n['title']}</strong></a></p>
