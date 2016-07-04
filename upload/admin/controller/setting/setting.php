@@ -56,6 +56,11 @@ class ControllerSettingSetting extends Controller {
 		$data['text_default_color_box'] = $this->language->get('text_default_color_box');
 		$data['text_default_color_footer'] = $this->language->get('text_default_color_footer');
 		$data['text_default_color_link'] = $this->language->get('text_default_color_link');
+		$data['text_social_network'] = $this->language->get('text_social_network');
+		$data['text_config_youtube_url'] = $this->language->get('text_config_youtube_url');
+		$data['text_config_facebook_url'] = $this->language->get('text_config_facebook_url');
+		$data['text_config_googleplus_url'] = $this->language->get('text_config_googleplus_url');
+		$data['text_config_twitter_url'] = $this->language->get('text_config_twitter_url');
 
 		$data['entry_name'] = $this->language->get('entry_name');
 		$data['entry_owner'] = $this->language->get('entry_owner');
@@ -71,6 +76,7 @@ class ControllerSettingSetting extends Controller {
 		$data['entry_meta_title'] = $this->language->get('entry_meta_title');
 		$data['entry_meta_description'] = $this->language->get('entry_meta_description');
 		$data['entry_meta_keyword'] = $this->language->get('entry_meta_keyword');
+		$data['entry_store_copyright'] = $this->language->get('entry_store_copyright');
 		$data['entry_layout'] = $this->language->get('entry_layout');
 		$data['entry_template'] = $this->language->get('entry_template');
 		$data['entry_country'] = $this->language->get('entry_country');
@@ -477,6 +483,30 @@ class ControllerSettingSetting extends Controller {
 
 		$data['token'] = $this->session->data['token'];
 
+		if (isset($this->request->post['config_youtube_url'])) {
+			$data['config_youtube_url'] = $this->request->post['config_youtube_url'];
+		} else {
+			$data['config_youtube_url'] = $this->config->get('config_youtube_url');
+		}
+
+		if (isset($this->request->post['config_facebook_url'])) {
+			$data['config_facebook_url'] = $this->request->post['config_facebook_url'];
+		} else {
+			$data['config_facebook_url'] = $this->config->get('config_facebook_url');
+		}
+
+		if (isset($this->request->post['config_googleplus_url'])) {
+			$data['config_googleplus_url'] = $this->request->post['config_googleplus_url'];
+		} else {
+			$data['config_googleplus_url'] = $this->config->get('config_googleplus_url');
+		}
+
+		if (isset($this->request->post['config_twitter_url'])) {
+			$data['config_twitter_url'] = $this->request->post['config_twitter_url'];
+		} else {
+			$data['config_twitter_url'] = $this->config->get('config_twitter_url');
+		}
+
 		if (isset($this->request->post['config_default_color_menu'])) {
 			$data['config_default_color_menu'] = $this->request->post['config_default_color_menu'];
 		} else {
@@ -603,11 +633,19 @@ class ControllerSettingSetting extends Controller {
 			$data['config_meta_keyword'] = $this->config->get('config_meta_keyword');
 		}
 
+		if (isset($this->request->post['config_store_copyright'])) {
+			$data['config_store_copyright'] = $this->request->post['config_store_copyright'];
+		} else {
+			$data['config_store_copyright'] = $this->config->get('config_store_copyright');
+		}
+
 		if (isset($this->request->post['config_layout_id'])) {
 			$data['config_layout_id'] = $this->request->post['config_layout_id'];
 		} else {
 			$data['config_layout_id'] = $this->config->get('config_layout_id');
 		}
+
+
 
 		$this->load->model('design/layout');
 

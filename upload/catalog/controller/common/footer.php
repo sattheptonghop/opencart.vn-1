@@ -45,7 +45,12 @@ class ControllerCommonFooter extends Controller {
 		$data['wishlist'] = $this->url->link('account/wishlist', '', 'SSL');
 		$data['newsletter'] = $this->url->link('account/newsletter', '', 'SSL');
 
-		$data['powered'] = sprintf($this->language->get('text_powered'), $this->config->get('config_name'), date('Y', time()));
+		$data['config_youtube_url'] = $this->config->get('config_youtube_url');
+		$data['config_facebook_url'] = $this->config->get('config_facebook_url');
+		$data['config_googleplus_url'] = $this->config->get('config_googleplus_url');
+		$data['config_twitter_url'] = $this->config->get('config_twitter_url');
+
+		$data['powered'] = sprintf($this->language->get('text_powered'), html_entity_decode($this->config->get('config_store_copyright')), date('Y', time()));
 
 		// Whos Online
 		if ($this->config->get('config_customer_online')) {

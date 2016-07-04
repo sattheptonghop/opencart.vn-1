@@ -42,7 +42,7 @@
   }
 
   /* Menu */
-  .menu-bg-color, .dropdown-menu li > a:hover, #menu .see-all:hover, #menu .see-all:focus{
+  .menu-bg-color, .dropdown-menu li > a:hover, #menu .see-all:hover, #menu .see-all:focus, footer .socials li a{
     background: <?php echo $config_default_color_menu ?>;
   }
 

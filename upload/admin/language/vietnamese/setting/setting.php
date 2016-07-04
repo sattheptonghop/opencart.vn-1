@@ -35,6 +35,12 @@ $_['text_default_color_box']           = 'Màu các box';
 $_['text_default_color_footer']        = 'Màu chân trang';
 $_['text_default_color_link']          = 'Màu đường dẫn';
 
+$_['text_social_network']              = 'Mạng xã hội';
+$_['text_config_youtube_url']          = 'Đường dẫn Youtube';
+$_['text_config_facebook_url']         = 'Đường dẫn Facebook';
+$_['text_config_googleplus_url']       = 'Đường dẫn Google Plus';
+$_['text_config_twitter_url']          = 'Đường dẫn Twitter';
+
 // Entry
 $_['entry_name']                       = 'Tên cửa hàng';
 $_['entry_owner']                      = 'Chủ cửa hàng';
@@ -50,6 +56,7 @@ $_['entry_location']                   = 'Vị trí';
 $_['entry_meta_title']                 = 'Meta Title';
 $_['entry_meta_description']           = 'Meta Tag Description';
 $_['entry_meta_keyword']               = 'Meta Tag Keywords';
+$_['entry_store_copyright']            = 'Bản quyền';
 $_['entry_layout']                     = 'Bố cục mặc định';
 $_['entry_template']                   = 'Giao diện';
 $_['entry_country']                    = 'Quốc gia';

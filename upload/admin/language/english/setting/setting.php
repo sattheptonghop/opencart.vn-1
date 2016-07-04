@@ -35,6 +35,12 @@ $_['text_default_color_box']           = 'Box color';
 $_['text_default_color_footer']        = 'Footer color';
 $_['text_default_color_link']          = 'A tag color';
 
+$_['text_social_network']              = 'Social Networks';
+$_['text_config_youtube_url']          = 'Youtube Url';
+$_['text_config_facebook_url']         = 'Facebook Url';
+$_['text_config_googleplus_url']       = 'Google Plus Url';
+$_['text_config_twitter_url']          = 'Twitter Url';
+
 // Entry
 $_['entry_name']                       = 'Store Name';
 $_['entry_owner']                      = 'Store Owner';
@@ -50,6 +56,7 @@ $_['entry_location']                   = 'Store Location';
 $_['entry_meta_title']                 = 'Meta Title';
 $_['entry_meta_description']           = 'Meta Tag Description';
 $_['entry_meta_keyword']               = 'Meta Tag Keywords';
+$_['entry_store_copyright']            = 'Copyright';
 $_['entry_layout']                     = 'Default Layout';
 $_['entry_template']                   = 'Template';
 $_['entry_country']                    = 'Country';

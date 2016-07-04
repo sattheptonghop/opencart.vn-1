@@ -93,7 +93,46 @@
                       <?php } ?>
                   </select></div>
               	</div>
+                <div class="form-group">
+                  <label class="col-sm-2 control-label" for="input-store-copyright"><?php echo $entry_store_copyright; ?></label>
+                  <div class="col-sm-10">
+                    <textarea name="config_store_copyright" rows="5" placeholder="<?php echo $entry_store_copyright; ?>" id="input-store-copyright" class="form-control"><?php echo $config_store_copyright; ?></textarea>
+                  </div>
+                </div>
+                <script type="text/javascript">
+                  CKEDITOR.config.jqueryOverrideVal = true;
+                  $('#input-store-copyright').ckeditor({
+                    height: 300
+                  });
+                </script>
               	</fieldset>
+                <fieldset>
+                  <legend><?php echo $text_social_network; ?></legend>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label" for="input-config-youtube-url"><?php echo $text_config_youtube_url; ?></label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" name="config_youtube_url" value="<?php echo $config_youtube_url; ?>" />
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label" for="input-config-facebook-url"><?php echo $text_config_facebook_url; ?></label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" name="config_facebook_url" value="<?php echo $config_facebook_url; ?>" />
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label" for="input-config-googleplus-url"><?php echo $text_config_googleplus_url; ?></label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" name="config_googleplus_url" value="<?php echo $config_googleplus_url; ?>" />
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label" for="input-config-twitter-url"><?php echo $text_config_twitter_url; ?></label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" name="config_twitter_url" value="<?php echo $config_twitter_url; ?>" />
+                    </div>
+                  </div>
+                </fieldset>
               	<fieldset>
 	                <legend><?php echo $text_default_color; ?></legend>
 	                <div class="form-group">

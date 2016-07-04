@@ -42,15 +42,41 @@
   </div>
   </div>
   <div class="container">
+    <ul class="socials">
+      <?php
+        if(! empty($config_youtube_url) )
+        {
+          ?>
+          <li><a href="<?php echo $config_youtube_url ?>" title="youtube"><i class="fa fa-youtube"></i></a></li>
+          <?php
+        }
+      ?>
+      <?php
+        if(! empty($config_facebook_url) )
+        {
+          ?>
+          <li><a href="<?php echo $config_facebook_url ?>" title="facebook"><i class="fa fa-facebook"></i></a></li>
+          <?php
+        }
+      ?>
+      <?php
+        if(! empty($config_googleplus_url) )
+        {
+          ?>
+          <li><a href="<?php echo $config_googleplus_url ?>" title="google plus"><i class="fa fa-google-plus"></i></a></li>
+          <?php
+        }
+      ?>
+      <?php
+        if(! empty($config_twitter_url) )
+        {
+          ?>
+          <li><a href="<?php echo $config_twitter_url ?>" title="twitter"><i class="fa fa-twitter"></i></a></li>
+          <?php
+        }
+      ?>
+    </ul>
     <p><?php echo $powered; ?></p>
   </div>
 </footer>
-
-<!--
-OpenCart is open source software and you are free to remove the powered by OpenCart if you want, but its generally accepted practise to make a small donation.
-Please donate via PayPal to donate@opencart.com
-//-->
-
-<!-- Theme created by Welford Media for OpenCart 2.0 www.welfordmedia.co.uk -->
-
 </body></html>
