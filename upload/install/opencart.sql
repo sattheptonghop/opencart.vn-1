@@ -2003,7 +2003,7 @@ INSERT INTO `oc_module` (`module_id`, `name`, `code`, `setting`) VALUES
 (37, 'Sản phẩm mới nhất', 'latest', '{"name":"S\\u1ea3n ph\\u1ea9m m\\u1edbi nh\\u1ea5t","limit":"4","width":"216","height":"250","status":"1"}'),
 (38, 'Home page', 'bestseller', '{"name":"Home page","limit":"8","width":"200","height":"200","status":"1"}'),
 (39, 'Góc quảng cáo', 'banner', '{"name":"G\\u00f3c qu\\u1ea3ng c\\u00e1o","banner_id":"9","width":"262","height":"379","status":"1"}'),
-(40, 'Hỗ trợ trực tuyến', 'support', '{"name":"H\\u1ed7 tr\\u1ee3 tr\\u1ef1c tuy\\u1ebfn","skype":"demoskype1","skype_2":"demoskype2","yahoo":"demoyahoo","email":"demo@opencart.vn","facebook":"opencartvietnam","status":"1"}'),
+(40, 'Hỗ trợ trực tuyến', 'support', '{"name":"H\\u1ed7 tr\\u1ee3 tr\\u1ef1c tuy\\u1ebfn","skype":"demoskype1","skype_2":"demoskype2","yahoo":"demoyahoo","email":"sales@opencart.vn","facebook":"https:\/\/www.facebook.com\/groups\/opencartdotvn","status":"1"}'),
 (41, 'Facebook Page', 'socials', '{"name":"Facebook Page","status":"1","page_url":"https:\/\/www.facebook.com\/FacebookVietnam","appId":"","width":"217","height":"214"}'),
 (42, 'Google Plus', 'socials', '{"name":"Google Plus","status":"1","page_url":"https:\/\/plus.google.com\/+GoogleWebmasters","width":"217"}'),
 (43, 'Header', 'banner', '{"name":"Header","banner_id":"10","width":"960","height":"100","status":"1"}'),
@@ -2218,7 +2218,7 @@ CREATE TABLE `oc_order` (
 --
 
 INSERT INTO `oc_order` (`order_id`, `invoice_no`, `invoice_prefix`, `store_id`, `store_name`, `store_url`, `customer_id`, `customer_group_id`, `firstname`, `lastname`, `email`, `telephone`, `fax`, `custom_field`, `payment_firstname`, `payment_lastname`, `payment_company`, `payment_address_1`, `payment_address_2`, `payment_city`, `payment_postcode`, `payment_country`, `payment_country_id`, `payment_zone`, `payment_zone_id`, `payment_address_format`, `payment_custom_field`, `payment_method`, `payment_code`, `shipping_firstname`, `shipping_lastname`, `shipping_company`, `shipping_address_1`, `shipping_address_2`, `shipping_city`, `shipping_postcode`, `shipping_country`, `shipping_country_id`, `shipping_zone`, `shipping_zone_id`, `shipping_address_format`, `shipping_custom_field`, `shipping_method`, `shipping_code`, `comment`, `total`, `order_status_id`, `affiliate_id`, `commission`, `marketing_id`, `tracking`, `language_id`, `currency_id`, `currency_code`, `currency_value`, `ip`, `forwarded_ip`, `user_agent`, `accept_language`, `date_added`, `date_modified`) VALUES
-(1, 0, 'INV-2013-00', 0, 'Your Store', '', 0, 1, 'Trung', 'Hoàng', 'shank.0.hair@gmail.com', '0983 000 0000', '', '[]', 'Trung', 'Hoàng', '', '8 Hồ Sen', '', 'Lê Chân', '', 'Việt Nam', 230, 'Hải Phòng', 3774, '', '[]', 'Thu tiền khi giao hàng', 'cod', 'Trung', 'Hoàng', '', '8 Hồ Sen', '', 'Lê Chân', '', 'Việt Nam', 230, 'Hải Phòng', 3774, '', '[]', 'Phí vận chuyển cố định', 'flat.flat', '', 185000.0000, 1, 0, 0.0000, 0, '', 2, 1, 'VND', 1.00000000, '::1', '', 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36', 'vi-VN,vi;q=0.8,fr-FR;q=0.6,fr;q=0.4,en-US;q=0.2,en;q=0.2,de;q=0.2,ja;q=0.2', '2016-07-02 09:39:45', '2016-07-02 09:39:55');
+(1, 0, 'INV-2013-00', 0, 'Your Store', '', 0, 1, 'VN', 'Opencart', 'sales@opencart.vn', '0983 000 0000', '', '[]', 'VN', 'Opencart', '', '68 Chùa Hà', '', 'Cầu Giấy', '', 'Việt Nam', 230, 'Hà Nội', 3776, '', '[]', 'Thu tiền khi giao hàng', 'cod', 'VN', 'Opencart', '', '68 Chùa Hà', '', 'Cầu Giấy', '', 'Việt Nam', 230, 'Hà Nội', 3776, '', '[]', 'Phí vận chuyển cố định', 'flat.flat', '', 185000.0000, 1, 0, 0.0000, 0, '', 2, 1, 'VND', 1.00000000, '::1', '', 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36', 'vi-VN,vi;q=0.8,fr-FR;q=0.6,fr;q=0.4,en-US;q=0.2,en;q=0.2,de;q=0.2,ja;q=0.2', '2016-07-02 09:39:45', '2016-07-02 09:39:55');
 
 -- --------------------------------------------------------
 
@@ -3274,7 +3274,7 @@ INSERT INTO `oc_setting` (`setting_id`, `store_id`, `code`, `key`, `value`, `ser
 (291, 0, 'config', 'config_default_color_box', '#229ac8', 0),
 (292, 0, 'config', 'config_default_color_footer', '#229ac8', 0),
 (293, 0, 'config', 'config_default_color_link', '#229ac8', 0),
-(294, 0, 'config', 'config_store_copyright', '&lt;p&gt;&lt;strong&gt;C&amp;Ocirc;NG TY CỔ PHẦN THƯƠNG MẠI V&amp;Agrave; DỊCH VỤ VIỆT NAM&lt;/strong&gt;&lt;br /&gt;\r\nĐịa chỉ: 68 Ch&amp;ugrave;a H&amp;agrave;, Dịch Vọng, Cầu Giấy, H&amp;agrave; Nội.&lt;br /&gt;\r\nĐT: 04 62 757 888, &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; DĐ: 094 3793984&lt;/p&gt;\r\n', 0),
+(294, 0, 'config', 'config_store_copyright', '&lt;p&gt;&lt;strong&gt;C&amp;Ocirc;NG TY CỔ PHẦN T&amp;Ecirc;N MIỀN&amp;nbsp;VIỆT NAM&lt;/strong&gt;&lt;br /&gt;\r\nĐịa chỉ: 68 Ch&amp;ugrave;a H&amp;agrave;, Dịch Vọng, Cầu Giấy, H&amp;agrave; Nội.&lt;br /&gt;\r\nĐT: 04 62 757 888, &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; DĐ: 094 3793984&lt;/p&gt;\r\n', 0),
 (295, 0, 'config', 'config_youtube_url', '#', 0),
 (296, 0, 'config', 'config_facebook_url', '#', 0),
 (297, 0, 'config', 'config_googleplus_url', '#', 0),

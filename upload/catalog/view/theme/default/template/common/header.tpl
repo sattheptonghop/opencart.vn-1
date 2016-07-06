@@ -65,7 +65,7 @@
     <?php echo $language; ?>
     <div id="top-links" class="nav">
       <ul class="list-inline">
-        <li><a href="<?php echo $contact; ?>"><i class="fa fa-phone"></i></a> <span class="hidden-xs hidden-sm hidden-md"><?php echo $telephone; ?></span></li>
+        <li><a href="<?php echo $contact; ?>"><i class="fa fa-phone"></i></a> <span><?php echo $telephone; ?></span></li>
         
         <li class="pull-right"><a href="<?php echo $wishlist; ?>" id="wishlist-total" title="<?php echo $text_wishlist; ?>"><i class="fa fa-heart"></i> <span class="hidden-xs hidden-sm hidden-md"><?php echo $text_wishlist; ?></span></a></li>
         
@@ -87,7 +87,7 @@
         <li class="pull-right">
         	<?php echo $cart; ?>
         </li>
-        <li class="pull-right">
+        <li class="pull-right hidden-xs">
         	<?php echo $search; ?>
         </li>
       </ul>

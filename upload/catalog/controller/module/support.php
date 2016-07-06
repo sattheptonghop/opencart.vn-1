@@ -43,9 +43,14 @@ class ControllerModuleSupport extends Controller {
  			'<a href="mailTo:'.$setting_support->email.'" class="list-group-item"><img src="image/support-email.png"> Email: <strong>'.$setting_support->email.'</strong></a>':
  			''
  		);
+
+ 		$facebook  = array( $setting_support->facebook );
+ 		if(! empty($setting_support->facebook) && strpos( $setting_support->facebook, '/' ) !== false )
+ 			$facebook = explode( "/", rtrim( $setting_support->facebook, "/" ) );
+
  		$data['support_facebook'] = (
  			$setting_support->facebook ?
- 			'<a href="https://www.facebook.com/'.$setting_support->facebook.'" class="list-group-item"><img src="image/support-facebook.png" /> Facebook: <strong>'.$setting_support->facebook.'</strong></a>':
+ 			'<a href="'.$setting_support->facebook.'" class="list-group-item"><img src="image/support-facebook.png" /> Facebook: <strong>' . end($facebook) . '</strong></a>':
  			''
  		);
 

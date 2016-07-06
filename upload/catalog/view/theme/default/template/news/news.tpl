@@ -11,7 +11,11 @@
 <div class="container">
   <ul class="breadcrumb">
     <?php foreach ($breadcrumbs as $breadcrumb) { ?>
-    <li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
+    <div itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+      <a href="<?php echo $breadcrumb['href']; ?>" itemprop="url">
+        <span itemprop="title"><?php echo $breadcrumb['text']; ?></span>
+      </a>
+    </div>
     <?php } ?>
   </ul>
   <div class="row"><?php echo $column_left; ?>

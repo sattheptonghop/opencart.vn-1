@@ -55,6 +55,8 @@ class ModelInstall extends Model {
 
 			$db->query("DELETE FROM `" . $data['db_prefix'] . "setting` WHERE `key` = 'config_api_id'");
 			$db->query("INSERT INTO `" . $data['db_prefix'] . "setting` SET `code` = 'config', `key` = 'config_api_id', value = '" . (int)$api_id . "'");
+
+			$db->query("UPDATE `" . $data['db_prefix'] . "order` SET `store_url` = '" . HTTP_OPENCART . "'");
 		}
 	}
 }
