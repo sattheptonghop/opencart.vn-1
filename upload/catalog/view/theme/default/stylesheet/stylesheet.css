@@ -430,17 +430,20 @@ footer .socials li:hover a{
 .breadcrumb i {
 	font-size: 15px;
 }
-.breadcrumb > li {
+.breadcrumb > li, .breadcrumb > div {
 	text-shadow: 0 1px 0 #FFF;
 	padding: 0 24px 0 20px;
 	position: relative;
 	white-space: nowrap;
 }
-.breadcrumb > li + li:before {
+.breadcrumb > div {
+	display: inline-block;
+}
+.breadcrumb > li + li:before, .breadcrumb > div + div:before {
 	content: '';
 	padding: 0;
 }
-.breadcrumb > li:before, .breadcrumb > li:after {
+.breadcrumb > li:before, .breadcrumb > li:after, .breadcrumb > div:before, .breadcrumb > div:after {
 	content: '';
 	display: block;
 	position: absolute;
@@ -455,7 +458,7 @@ footer .socials li:hover a{
 	-o-transform: rotate(-45deg);
 	transform: rotate(-45deg);
 }
-.breadcrumb > li:before{
+.breadcrumb > li:before, .breadcrumb > div:before{
 	right: 3px;
 }
 .pagination {
