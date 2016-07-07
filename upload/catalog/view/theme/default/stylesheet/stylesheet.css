@@ -137,6 +137,12 @@ header{
 	background-position: center center;
 }
 
+@media (max-width: 767px) {
+	header {
+		background: none !important;
+	}
+}
+
 /* logo */
 #logo {
 	margin: 0 0 10px 0;
