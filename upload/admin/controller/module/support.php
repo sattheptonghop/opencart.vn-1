@@ -41,9 +41,11 @@ class ControllerModuleSupport extends Controller {
 		$data['text_enabled'] = $this->language->get('text_enabled');
 		$data['text_disabled'] = $this->language->get('text_disabled');
 
+		$data['entry_none'] = $this->language->get('entry_none');
 		$data['entry_name'] = $this->language->get('entry_name');
+		$data['entry_value'] = $this->language->get('entry_value');
+		$data['entry_call'] = $this->language->get('entry_call');
 		$data['entry_skype'] = $this->language->get('entry_skype');
-		$data['entry_skype_2'] = $this->language->get('entry_skype_2');
 		$data['entry_yahoo'] = $this->language->get('entry_yahoo');
 		$data['entry_email'] = $this->language->get('entry_email');
 		$data['entry_facebook'] = $this->language->get('entry_facebook');
@@ -96,47 +98,15 @@ class ControllerModuleSupport extends Controller {
 			$data['name'] = '';
 		}
 
-		if (isset($this->request->post['skype'])) {
-			$data['skype'] = $this->request->post['skype'];
-		} elseif (!empty($module_info)) {
-			$data['skype'] = $module_info['skype'];
+		
+
+
+		if ( isset($this->request->post['support']) ) {
+			$data['support'] = $this->request->post['support'];
+		} elseif (! empty($module_info['support']) ) {
+			$data['support'] = $module_info['support'];
 		} else {
-			$data['skype'] = '';
-		}
-
-		if (isset($this->request->post['skype_2'])) {
-			$data['skype_2'] = $this->request->post['skype_2'];
-		} elseif (!empty($module_info)) {
-			$data['skype_2'] = $module_info['skype_2'];
-		} else {
-			$data['skype_2'] = '';
-		}
-
-
-		if (isset($this->request->post['email'])) {
-			$data['email'] = $this->request->post['email'];
-		} elseif (!empty($module_info)) {
-			$data['email'] = $module_info['email'];
-		} else {
-			$data['email'] = '';
-		}
-
-
-		if (isset($this->request->post['yahoo'])) {
-			$data['yahoo'] = $this->request->post['yahoo'];
-		} elseif (!empty($module_info)) {
-			$data['yahoo'] = $module_info['yahoo'];
-		} else {
-			$data['yahoo'] = '';
-		}
-
-
-		if (isset($this->request->post['facebook'])) {
-			$data['facebook'] = $this->request->post['name'];
-		} elseif (!empty($module_info)) {
-			$data['facebook'] = $module_info['facebook'];
-		} else {
-			$data['facebook'] = '';
+			$data['support'] = array();
 		}
 
 		if (isset($this->request->post['status'])) {

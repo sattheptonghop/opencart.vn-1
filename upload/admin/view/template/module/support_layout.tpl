@@ -28,45 +28,56 @@
           <div class="form-group">
             <label class="col-sm-2 control-label" for="input-name"><?php echo $entry_name; ?></label>
             <div class="col-sm-10">
-              <input type="text" name="name" value="<?php echo $name; ?>" placeholder="<?php echo $entry_name; ?>" id="input-name" class="form-control" />
-              <?php if ($error_name) { ?>
-              <div class="text-danger"><?php echo $error_name; ?></div>
-              <?php } ?>
+              <input name="name" id="input-name" class="form-control" type="text" value="<?php echo $name ?>" placeholder="<?php echo $entry_name; ?>" />
             </div>
           </div>
+          <div id="support-item">
+          <?php
+            $max = 0;
+            if( $support )
+            {
+              foreach( $support as $k => $sp )
+              {
+                ?>
+                <div id="support-row<?php echo $k ?>" class="form-group">
+                  <div class="col-sm-2">
+                  </div>
+                  <div class="col-sm-2">
+                    <select name="support[<?php echo $k ?>][type]" class="form-control">
+                      <option value="0"><?php echo $entry_none; ?></option>
+                      <option value="1" <?php echo ( $sp['type'] == 1 ? 'selected' : '' ) ?>><?php echo $entry_call; ?></option>
+                      <option value="2" <?php echo ( $sp['type'] == 2 ? 'selected' : '' ) ?>><?php echo $entry_email; ?></option>
+                      <option value="3" <?php echo ( $sp['type'] == 3 ? 'selected' : '' ) ?>><?php echo $entry_yahoo; ?></option>
+                      <option value="4" <?php echo ( $sp['type'] == 4 ? 'selected' : '' ) ?>><?php echo $entry_skype; ?></option>
+                      <option value="5" <?php echo ( $sp['type'] == 5 ? 'selected' : '' ) ?>><?php echo $entry_facebook; ?></option>
+                    </select>
+                  </div>
+                  <div class="col-sm-6">
+                    <input type="text" name="support[<?php echo $k ?>][name]" value="<?php echo $sp['name']; ?>" placeholder="<?php echo $entry_value; ?>" class="form-control" />
+                  </div>
+                  <div class="col-sm-2">
+                    <button type="button" onclick="$('#support-row<?php echo $k ?>').remove();" data-toggle="tooltip" title="" class="btn btn-danger" data-original-title="Hủy"><i class="fa fa-minus-circle"></i></button>
+                  </div>
+                </div>
+
+                <?php
+
+                if( $max < $k )
+                  $max = $k;
+              }
+            }
+          ?>
+          </div>
+
+          
           <div class="form-group">
-            <label class="col-sm-2 control-label" for="input-skype"><?php echo $entry_skype; ?></label>
-            <div class="col-sm-10">
-              <input type="text" name="skype" value="<?php echo $skype; ?>" placeholder="<?php echo $entry_skype; ?>" id="input-skype" class="form-control" />
-
-            </div>
-          </div>
-           <div class="form-group">
-            <label class="col-sm-2 control-label" for="input-skype-2"><?php echo $entry_skype_2; ?></label>
-            <div class="col-sm-10">
-              <input type="text" name="skype_2" value="<?php echo $skype_2; ?>" placeholder="<?php echo $entry_skype_2; ?>" id="input-skype-2" class="form-control" />
-
-            </div>
-          </div>
-           <div class="form-group">
-            <label class="col-sm-2 control-label" for="input-yahoo"><?php echo $entry_yahoo; ?></label>
-            <div class="col-sm-10">
-              <input type="text" name="yahoo" value="<?php echo $yahoo; ?>" placeholder="<?php echo $entry_yahoo; ?>" id="input-yahoo" class="form-control" />
- 
-            </div>
-          </div>
-           <div class="form-group">
-            <label class="col-sm-2 control-label" for="input-email"><?php echo $entry_email; ?></label>
-            <div class="col-sm-10">
-              <input type="text" name="email" value="<?php echo $email; ?>" placeholder="<?php echo $entry_email; ?>" id="input-email" class="form-control" />
-
-            </div>
-          </div>
-           <div class="form-group">
-            <label class="col-sm-2 control-label" for="input-facebook"><?php echo $entry_facebook; ?></label>
-            <div class="col-sm-10">
-              <input type="text" name="facebook" value="<?php echo $facebook; ?>" placeholder="<?php echo $entry_facebook; ?>" id="input-facebook" class="form-control" />
-
+            <div class="col-sm-2"></div>
+            <div class="col-sm-2"></div>
+            <div class="col-sm-6"></div>
+            <div class="col-sm-2">
+              <button id="add-support" type="button" data-toggle="tooltip" title="" class="btn btn-primary" data-original-title="Thêm support">
+                <i class="fa fa-plus-circle"></i>
+              </button>
             </div>
           </div>
           <div class="form-group">
@@ -88,4 +99,37 @@
     </div>
   </div>
 </div>
+
+<script type="text/javascript">
+  row = <?php echo $max ?>;
+  $('document').ready(function(){
+    $('#add-support').on('click', function(){
+      var result = '';
+      row++;
+
+      result += '<div id="support-row'+row+'" class="form-group">';
+      result += ' <div class="col-sm-2">';
+      result += ' </div>';
+      result += ' <div class="col-sm-2">';
+      result += '  <select name="support['+row+'][type]" class="form-control">';
+      result += '    <option value="0"><?php echo $entry_none; ?></option>';
+      result += '    <option value="1"><?php echo $entry_call; ?></option>';
+      result += '    <option value="2"><?php echo $entry_email; ?></option>';
+      result += '    <option value="3"><?php echo $entry_yahoo; ?></option>';
+      result += '    <option value="4"><?php echo $entry_skype; ?></option>';
+      result += '    <option value="5"><?php echo $entry_facebook; ?></option>';
+      result += '  </select>';
+      result += ' </div>';
+      result += ' <div class="col-sm-6">';
+      result += '  <input type="text" name="support['+row+'][name]" value="" placeholder="<?php echo $entry_value; ?>" class="form-control" />';
+      result += ' </div>';
+      result += ' <div class="col-sm-2">';
+      result += '   <button type="button" onclick="$(\'#support-row'+row+'\').remove();" data-toggle="tooltip" title="" class="btn btn-danger" data-original-title="Hủy"><i class="fa fa-minus-circle"></i></button>';
+      result += ' </div>';
+      result += '</div>';
+      
+      $('#support-item').append(result);
+    });
+  });
+</script>
 <?php echo $footer; ?>

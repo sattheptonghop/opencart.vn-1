@@ -23,37 +23,50 @@ class ControllerModuleSupport extends Controller {
  		$setting_support = json_decode($support_module[0]['setting']);
  		$data['module_title'] = $support_module[0]['name'];
 		
- 		$data['support_skype'] = (
- 			$setting_support->skype ?
- 			'<a href="skype:'.$setting_support->skype.'?chat" class="list-group-item"><img src="image/support-skype.png"> Skype: <strong>'.$setting_support->skype.'</strong></a>':
- 			'cx'
- 		);
- 		$data['support_skype_2'] = (
- 			$setting_support->skype_2 ?
- 			'<a href="skype:'.$setting_support->skype_2.'?chat" class="list-group-item"><img src="image/support-skype.png"> Skype: <strong>'.$setting_support->skype_2.'</strong></a>':
- 			''
- 		);
- 		$data['support_yahoo'] = (
- 			$setting_support->yahoo ?
- 			'<a href="ymsgr:SendIM?'.$setting_support->yahoo.'" class="list-group-item"><img src="image/support-yahoo.png"> Yahoo: <strong>'.$setting_support->yahoo.'</strong></a>':
- 			''
- 		);
- 		$data['support_email'] = (
- 			$setting_support->email ?
- 			'<a href="mailTo:'.$setting_support->email.'" class="list-group-item"><img src="image/support-email.png"> Email: <strong>'.$setting_support->email.'</strong></a>':
- 			''
- 		);
-
- 		$facebook  = array( $setting_support->facebook );
- 		if(! empty($setting_support->facebook) && strpos( $setting_support->facebook, '/' ) !== false )
- 			$facebook = explode( "/", rtrim( $setting_support->facebook, "/" ) );
-
- 		$data['support_facebook'] = (
- 			$setting_support->facebook ?
- 			'<a href="'.$setting_support->facebook.'" class="list-group-item"><img src="image/support-facebook.png" /> Facebook: <strong>' . end($facebook) . '</strong></a>':
- 			''
- 		);
-
+		$data['support'] = array();
+ 		if(! empty($setting_support->support) )
+ 		{
+ 			foreach ($setting_support->support as $key => $value) {
+ 				if( $value->type == 1 )
+ 				{
+ 					$data['support'][] = '
+ 						<a href="tel:'.$value->name.'" class="list-group-item">
+ 							<img src="image/support-call.png">&nbsp;&nbsp;&nbsp;<strong>'.$value->name.'</strong>
+ 						</a>';
+ 				} 
+ 				else if( $value->type == 2 )
+ 				{
+ 					$data['support'][] = '
+ 						<a href="mailTo:'.$value->name.'" class="list-group-item">
+ 							<img src="image/support-email.png">&nbsp;&nbsp;&nbsp;<strong>'.$value->name.'</strong>
+ 						</a>';
+ 				}
+ 				else if( $value->type == 3 )
+ 				{
+ 					$data['support'][] = '
+ 						<a href="ymsgr:SendIM?'.$value->name.'" class="list-group-item">
+ 							<img src="image/support-yahoo.png">&nbsp;&nbsp;&nbsp;<strong>'.$value->name.'</strong>
+ 						</a>';
+ 				}
+ 				else if( $value->type == 4 )
+ 				{
+ 					$data['support'][] = '
+ 						<a href="skype:'.$value->name.'?chat" class="list-group-item">
+ 							<img src="image/support-skype.png">&nbsp;&nbsp;&nbsp;<strong>'.$value->name.'</strong>
+ 						</a>';
+ 				}
+ 				else if( $value->type == 5 )
+ 				{
+ 					$facebook  = array( $value->name );
+			 		if(! empty($value->name) && strpos( $value->name, '/' ) !== false )
+			 			$facebook = explode( "/", rtrim( $value->name, "/" ) );
+ 					$data['support'][] = '
+ 						<a href="'.$value->name.'" class="list-group-item">
+ 							<img src="image/support-facebook.png">&nbsp;&nbsp;&nbsp;<strong>'.end($facebook).'</strong>
+ 						</a>';
+ 				}
+ 			}
+ 		}
 
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/module/support.tpl')) {
 			return $this->load->view($this->config->get('config_template') . '/template/module/support.tpl', $data);
