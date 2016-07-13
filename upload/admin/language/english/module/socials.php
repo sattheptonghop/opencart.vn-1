@@ -36,4 +36,3 @@ $_['text_success']          = 'Updated successfully!';
 $_['error_permission']      = 'Warning: permission!';
 
 ?>
-
