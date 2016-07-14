@@ -288,8 +288,14 @@ class ControllerProductProduct extends Controller {
 			}
 
 			if ($product_info['image']) {
+				if ($this->request->server['HTTPS']) {
+					$data['image'] =  $this->config->get('config_ssl') . 'image/' . $product_info['image'];
+				} else {
+					$data['image'] =  $this->config->get('config_url') . 'image/' . $product_info['image'];
+				}
 				$data['thumb'] = $this->model_tool_image->resize($product_info['image'], $this->config->get('config_image_popup_width'), $this->config->get('config_image_popup_width'));
 			} else {
+				$data['image'] = '';
 				$data['thumb'] = '';
 			}
 

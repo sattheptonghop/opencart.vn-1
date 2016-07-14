@@ -38,7 +38,8 @@ class ControllerNewsNews extends Controller {
 			);
 
 			$this->document->setTitle($news_info['title']);
-			$this->document->setDescription($news_info['description']);
+			$data['metaDescription'] = addslashes(substr(strip_tags(html_entity_decode($news_info['description'])), 0, 160));
+			$this->document->setDescription($data['metaDescription']);
 			$this->document->setKeywords($news_info['keyword']);
 			$this->document->addLink($this->url->link('news/news', 'id=' . $this->request->get['id']), 'canonical');
 			$data['heading_title'] = $news_info['title'];
@@ -47,15 +48,21 @@ class ControllerNewsNews extends Controller {
 			$this->load->model('tool/image');
 
 			if ($news_info['image']) {
+				if ($this->request->server['HTTPS']) {
+					$data['image'] =  $this->config->get('config_ssl') . 'image/' . $news_info['image'];
+				} else {
+					$data['image'] =  $this->config->get('config_url') . 'image/' . $news_info['image'];
+				}
 				$data['thumb'] = $this->model_tool_image->resize($news_info['image'], $this->config->get('config_image_thumb_width'), $this->config->get('config_image_thumb_height'));
 			} else {
+				$data['image'] = '';
 				$data['thumb'] = '';
 			}
 			$data['cat_id'] = $news_info['cat_id'];
 			$data['hits'] = $news_info['hits'];
 			$data['posted_date'] = $news_info['posted_date'];
 			$data['brief'] = $news_info['brief'];
-			$data['description'] = $news_info['description'];
+			$data['description'] = html_entity_decode($news_info['description']);
 			
 			$text = array('text_published_at','text_on','text_views');
 			foreach($text as $t)

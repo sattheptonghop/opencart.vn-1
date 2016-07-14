@@ -69,7 +69,8 @@ class ControllerNewsListnews extends Controller {
 
 			// Page
 			$this->document->setTitle($listnews_info['title']);
-			$this->document->setDescription($listnews_info['description']);
+			$data['metaDescription'] = addslashes(substr(strip_tags(html_entity_decode($listnews_info['description'])), 0, 160));
+			$this->document->setDescription($data['metaDescription']);
 			$this->document->setKeywords($listnews_info['keyword']);
 			$this->document->addLink($this->url->link('news/listnews', 'id=' . $this->request->get['id']), 'canonical');
 			$data['heading_title'] = $listnews_info['title'];
@@ -78,13 +79,19 @@ class ControllerNewsListnews extends Controller {
 			$this->load->model('tool/image');
 
 			if ($listnews_info['image']) {
+				if ($this->request->server['HTTPS']) {
+					$data['image'] =  $this->config->get('config_ssl') . 'image/' . $listnews_info['image'];
+				} else {
+					$data['image'] =  $this->config->get('config_url') . 'image/' . $listnews_info['image'];
+				}
 				$data['thumb'] = $this->model_tool_image->resize($listnews_info['image'], $this->config->get('config_image_thumb_width'), $this->config->get('config_image_thumb_height'));
 			} else {
 				$data['thumb'] = '';
+				$data['image'] = '';
 			}
 			$data['parent_id'] = $listnews_info['parent_id'];
 			$data['ord'] = $listnews_info['ord'];
-			$data['description'] = $listnews_info['description'];
+			$data['description'] = html_entity_decode($listnews_info['description']);
 
 
 			$text = array('text_published_at','text_on','text_views');

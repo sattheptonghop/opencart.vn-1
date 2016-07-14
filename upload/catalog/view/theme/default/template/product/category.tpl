@@ -1,3 +1,14 @@
+<meta property="og:title" content="<?php echo $heading_title; ?>" />
+<meta property="og:description" content="<?php echo substr( strip_tags($description), 0, 160 ); ?>" />
+<?php
+  if( $image )
+  {
+    ?>
+    <link rel="image_src" href="<?php echo $image ?>" />
+    <meta property="og:image" content="<?php echo $image ?>" />
+    <?php
+  }
+?>
 <?php echo $header; ?>
 <div class="container">
   <div class="breadcrumb">

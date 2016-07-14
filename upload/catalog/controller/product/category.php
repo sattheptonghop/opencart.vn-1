@@ -122,9 +122,15 @@ class ControllerProductCategory extends Controller {
 			);
 
 			if ($category_info['image']) {
+				if ($this->request->server['HTTPS']) {
+					$data['image'] =  $this->config->get('config_ssl') . 'image/' . $category_info['image'];
+				} else {
+					$data['image'] =  $this->config->get('config_url') . 'image/' . $category_info['image'];
+				}
 				$data['thumb'] = $this->model_tool_image->resize($category_info['image'], $this->config->get('config_image_category_width'), $this->config->get('config_image_category_height'));
 			} else {
 				$data['thumb'] = '';
+				$data['image'] = '';
 			}
 
 			$data['description'] = html_entity_decode($category_info['description'], ENT_QUOTES, 'UTF-8');

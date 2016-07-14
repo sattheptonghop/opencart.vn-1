@@ -1,3 +1,15 @@
+
+<meta property="og:title" content="<?php echo $heading_title; ?>" />
+<meta property="og:description" content="<?php echo $metaDescription; ?>" />
+<?php
+  if( $image )
+  {
+    ?>
+    <link rel="image_src" href="<?php echo $image ?>" />
+    <meta property="og:image" content="<?php echo $image ?>" />
+    <?php
+  }
+?>
 <?php echo $header; ?>
 <div class="container">
   <ul class="breadcrumb">
@@ -20,6 +32,7 @@
     <div id="content" class="<?php echo $class; ?> list-style"><?php echo $content_top; ?>
       <h1><?php echo $heading_title; ?></h1>
       <?php 
+        echo $description;
         foreach ($news as $n) {
           echo "
             <div class='row'>
