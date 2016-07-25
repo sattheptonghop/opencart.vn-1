@@ -123,3 +123,4 @@ $_['error_image_cart']                 = 'Kích thước hình ảnh giỏ hàng
 $_['error_image_location']             = 'Kích thước hình ảnh cửa hàng được yêu cầu!';
 $_['error_default']                    = 'Cảnh báo: Bạn không được xóa cửa hàng mặc định!';
 $_['error_store']                      = 'Cảnh báo : Cửa hàng này không thể bị xóa vì nó hiện đang được ghi nhận %s các đơn hàng!';
+?>

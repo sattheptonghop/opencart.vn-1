@@ -101,3 +101,4 @@ $_['text_openbay_report_price']        = 'Báo giá';
 $_['text_openbay_order_import']        = 'Nhập đơn hàng';
 $_['text_paypal_manage']               = 'PayPal';
 $_['text_paypal_search']               = 'Tìm kiếm';
+?>

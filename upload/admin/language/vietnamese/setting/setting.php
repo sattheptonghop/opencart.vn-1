@@ -249,3 +249,5 @@ $_['error_ftp_password']               = 'FTP Password được yêu cầu!';
 $_['error_error_filename']             = 'Yêu cầu lịch sử lỗi tên tập tin!';
 $_['error_malformed_filename']	       = 'Lỗi dạng sai Log Filename !';
 $_['error_encryption']                 = 'Encryption Key phải nằm giữa 32 và 1024 ký tự ! ';
+
+?>

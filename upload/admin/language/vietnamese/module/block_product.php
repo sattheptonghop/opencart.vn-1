@@ -22,3 +22,5 @@ $_['entry_name']     = 'Tên block';
 
 // Error
 $_['error_permission'] = 'Cảnh báo: Bạn không được phép sửa đổi mô-đun Danh mục!';
+
+?>

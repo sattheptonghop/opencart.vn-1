@@ -28,6 +28,7 @@ class ControllerModuleNews extends Controller {
  		$setting_news = json_decode($lastest_news[0]['setting']);
  		$data['module_title'] = $lastest_news[0]['name'];
 		$news = $this->model_module_news->getAllNews(array('start'=>0,'limit'=>$setting_news->limit));
+		$data['news'] = array();
 		foreach ($news as $n) {
 			if ($n['image']) {
 				$thumb = $this->model_tool_image->resizeAdaptive($n['image'], $this->config->get('config_image_additional_width'), $this->config->get('config_image_additional_height'), 'w');

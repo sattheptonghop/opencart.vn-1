@@ -37,4 +37,3 @@ $_['text_success']          = 'Sửa mạng xã hội thành công!';
 $_['error_permission']      = 'Cảnh báo: Bạn không có quyền thao tác!';
 
 ?>
-

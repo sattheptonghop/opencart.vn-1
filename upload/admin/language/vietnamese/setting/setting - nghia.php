@@ -236,3 +236,4 @@ $_['error_ftp_password']               = 'FTP Password required!';
 $_['error_error_filename']             = 'Error Log Filename required!';
 $_['error_malformed_filename']	       = 'Error Malformed Log Filename!';
 $_['error_encryption']                 = 'Encryption Key must be between 32 and 1024 characters!';
+?>
